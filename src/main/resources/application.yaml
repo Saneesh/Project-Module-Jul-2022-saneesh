@@ -1,0 +1,14 @@
+server:
+  port: 8085
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver # Use Postgress in PROD
+    url: jdbc:h2:file:./data/blogan;DB_CLOSE_DELAY=-1
+  jpa:
+    hibernate:
+      ddl-auto: update # When restart, update the database changes
+    show-sql: true
+
+    properties:
+      hibernate:
+        format_sql: true
